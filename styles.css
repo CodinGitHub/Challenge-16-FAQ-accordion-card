@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --Very-dark-desaturated-blue: hsl(238, 29%, 16%);
+    --Soft-red: hsl(14, 88%, 65%);
+    --Soft-violet: hsl(273, 75%, 66%);
+    --Soft-blue: hsl(240, 73%, 65%);
+    --Very-dark-grayish-blue: hsl(237, 12%, 33%);
+    --Dark-grayish-blue: hsl(240, 6%, 50%);
+    --Light-grayish-blue: hsl(240, 5%, 91%);
+}
+body{
+    font-family: 'Kumbh Sans', sans-serif;
+    background: linear-gradient(180deg, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    height: 100vh;
+}
+.main-container{
+    background-color: var(--Light-grayish-blue);
+    width: 330px;
+    min-height: 536px;
+    border-radius: 24px;
+    margin: 147px auto 30px;
+    padding: 24px;
+    box-shadow: 0 10px 40px var(--Very-dark-desaturated-blue); 
+}
+.main-container__s1__image{
+    display: block;
+    width: 240px;
+    margin: -132px auto 0;
+    background-color: unset;
+}
+.main-container__s1__image--shadow{
+    display: block;
+    width: 240px;
+    margin: -75px auto 0;
+    content: url("./images/bg-pattern-mobile.svg");
+}
+.main-container__s2__header{
+    text-align: center;
+    font-size: 2em;
+    margin: 24px 0 30px;
+}
+.main-container__s2__details{
+    font-size: 0.9em;
+    margin: 16px 0;
+    position: relative;
+}
+.main-container__s2__details[open]{
+    font-weight: 700;
+}
+.main-container__s2__details__sumary{
+    list-style: none;
+}
+.main-container__s2__details__sumary:hover{
+    cursor: pointer;
+}
+.main-container__s2__details__sumary::after{
+    content: url(./images/icon-arrow-down.svg);
+    position: absolute;
+    right: 5px;
+}
+.main-container__s2__details__paragraph{
+    color: var(--Dark-grayish-blue);
+    font-weight: 400;
+    font-size: 0.9em;
+    margin: 10px 0;
+}
+.attribution { 
+    font-size: 14px; 
+    text-align: center; 
+    font-weight: 700;
+}
+.attribution a { 
+    color: var(--Light-grayish-blue);
+}
+/*-----------------Desktop------------------------*/
+
+@media (min-width: 1044px){
+    .main-container{
+        width: 924px; 
+        display: flex;
+        justify-content: space-between;
+        background-image: url("./images/bg-pattern-desktop.svg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position-x: -536px;
+        background-position-y: -281px;
+        overflow: visible;   
+    }
+    .main-container__s1{
+        width: 100%;
+    }
+    .main-container__s1__image{
+       width: 474px; 
+       margin: 67px 0 0 -130px;
+    }
+    .main-container__s1__image--shadow{
+        content: url('');
+    }
+    .main-container__s2{
+        width: 100%;
+        padding: 15px 80px 20px 40px;
+    }
+    .main-container__s2__header{
+        text-align: left;
+        font-size: 2em;
+        margin-bottom: 32px;
+    }
+    .main-container__s2__details{
+        margin: 16px 0;
+    }
+}
