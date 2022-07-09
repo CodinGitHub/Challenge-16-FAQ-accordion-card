@@ -12,6 +12,7 @@
     --Very-dark-grayish-blue: hsl(237, 12%, 33%);
     --Dark-grayish-blue: hsl(240, 6%, 50%);
     --Light-grayish-blue: hsl(240, 5%, 91%);
+    --white: #fff;
 }
 body{
     font-family: 'Kumbh Sans', sans-serif;
@@ -19,7 +20,7 @@ body{
     height: 100vh;
 }
 .main-container{
-    background-color: var(--Light-grayish-blue);
+    background-color: var(--white);
     width: 330px;
     min-height: 536px;
     border-radius: 24px;
@@ -52,22 +53,33 @@ body{
 .main-container__s2__details[open]{
     font-weight: 700;
 }
+.main-container__s2__details[open] .main-container__s2__details__icon{
+    transform: rotate(180deg);
+    transition: 300ms;
+}
 .main-container__s2__details__sumary{
     list-style: none;
 }
 .main-container__s2__details__sumary:hover{
     cursor: pointer;
+    color: var(--Soft-red);
+    font-weight: 700;
 }
-.main-container__s2__details__sumary::after{
+.main-container__s2__details__icon{
     content: url(./images/icon-arrow-down.svg);
     position: absolute;
     right: 5px;
+    transition: 300ms;
 }
 .main-container__s2__details__paragraph{
     color: var(--Dark-grayish-blue);
     font-weight: 400;
     font-size: 0.9em;
     margin: 10px 0;
+}
+.main-container__s2__line{
+    border-color: transparent;
+    border-bottom-color: var(--Light-grayish-blue);
 }
 .attribution { 
     font-size: 14px; 

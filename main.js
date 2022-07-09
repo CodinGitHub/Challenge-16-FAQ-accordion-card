@@ -1,8 +1,10 @@
-let elements = document.querySelectorAll('.main-container__details__sumary');
+// let questions = document.querySelector('.main-container__s2');
 
-let arrayElements = [...elements]
 
-console.log(elements)
-console.log(arrayElements)
-
-elements.forEach(item => console.log(item))
+// questions.addEventListener('click', (event)=>{
+//     if(event.target.className === 'main-container__s2__details__sumary'){
+//         event.target.childNodes[1].style.add('main-container__s2__details__icon--turn-up')
+//     }
+//     console.log()
+//     console.log(event)
+// });
